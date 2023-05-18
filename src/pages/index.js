@@ -48,8 +48,8 @@ export default function Home() {
     // message 형태 = { role: "user", content: string }
     // ChatInput.js 26번째 줄 참고
     const updatedMessages = [...messages, message];
-    // console.log(updatedMessages);
-    // console.log(updatedMessages.slice(-6));
+    console.log(updatedMessages);
+    console.log(updatedMessages.slice(-6));
 
     setMessages(updatedMessages);
     // 메시지 전송 중임을 표시
@@ -80,7 +80,7 @@ export default function Home() {
       return;
     }
 
-    // console.log(result);
+    console.log(result);
 
     // 로딩 상태를 해제하고, 메시지 목록에 응답을 추가
     setLoading(false);
@@ -93,7 +93,7 @@ export default function Home() {
     setMessages([
       {
         role: "assistant",
-        content: "안녕? 나는 엘리엇이야. 오늘은 무슨 일이 있었니?",
+        content: "나는 세이지. 고민이 있다면 말해보시오.",
       },
     ]);
   };
@@ -111,7 +111,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>A Simple Chatbot</title>
+        <title>ask to sage</title>
         <meta name="description" content="A Simple Chatbot" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -124,7 +124,7 @@ export default function Home() {
               className="ml-2 hover:opacity-50"
               href="https://code-scaffold.vercel.app"
             >
-              A Simple Chatbot
+              Ask to Sage
             </a>
           </div>
         </div>
